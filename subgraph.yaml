@@ -1,0 +1,215 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: SpaceStationV1
+    network: bsc
+    source:
+      address: "0x835f22b4280aAf357d12DBf03721651b3A8b0167"
+      abi: SpaceStationV1
+      startBlock: 14328215
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/spacestationv1.ts
+      entities:
+        - EventClaim
+        - EventClaimBatch
+        - EventForge
+      abis:
+        - name: SpaceStationV1
+          file: ./abis/SpaceStationV1.json
+      eventHandlers:
+        - event: EventClaim(uint256,uint256,uint256,address)
+          handler: handleEventClaim
+        - event: EventClaimBatch(uint256,uint256[],uint256[],address)
+          handler: handleEventClaimBatch
+        - event: EventForge(uint256,uint256,uint256,address)
+          handler: handleEventForge
+  - kind: ethereum/contract
+    name: SpaceStationV1-1
+    network: bsc
+    source:
+      address: "0x5C1274456be4dd280429B9A8319e552cAD2595fA"
+      abi: SpaceStationV1
+      startBlock: 14328215
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/spacestationv1.ts
+      entities:
+        - EventClaim
+        - EventClaimBatch
+        - EventForge
+      abis:
+        - name: SpaceStationV1
+          file: ./abis/SpaceStationV1.json
+      eventHandlers:
+        - event: EventClaim(uint256,uint256,uint256,address)
+          handler: handleEventClaim
+        - event: EventClaimBatch(uint256,uint256[],uint256[],address)
+          handler: handleEventClaimBatch
+        - event: EventForge(uint256,uint256,uint256,address)
+          handler: handleEventForge
+  - kind: ethereum/contract
+    name: SpaceStationV1-2
+    network: bsc
+    source:
+      address: "0x760B8237e457e6A2b5b196ae073EF0301b8316a2"
+      abi: SpaceStationV1
+      startBlock: 14328215
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/spacestationv1.ts
+      entities:
+        - EventClaim
+        - EventClaimBatch
+        - EventForge
+      abis:
+        - name: SpaceStationV1
+          file: ./abis/SpaceStationV1.json
+      eventHandlers:
+        - event: EventClaim(uint256,uint256,uint256,address)
+          handler: handleEventClaim
+        - event: EventClaimBatch(uint256,uint256[],uint256[],address)
+          handler: handleEventClaimBatch
+        - event: EventForge(uint256,uint256,uint256,address)
+          handler: handleEventForge
+  - kind: ethereum/contract
+    name: SpaceStationV2
+    network: bsc
+    source:
+      address: "0x2D18f2d27D50C9b4013DEBA3D54f60996bD8847E"
+      abi: SpaceStationV2
+      startBlock: 17448223
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/spacestationv2.ts
+      entities:
+        - EventClaim
+        - EventClaimBatch
+        - EventClaimBatchCapped
+        - EventClaimCapped
+        - EventForge
+      abis:
+        - name: SpaceStationV2
+          file: ./abis/SpaceStationV2.json
+      eventHandlers:
+        - event: EventClaim(uint256,uint256,uint256,address,address)
+          handler: handleEventClaim
+        - event: EventClaimBatch(uint256,uint256[],uint256[],address,address)
+          handler: handleEventClaimBatch
+        - event: EventClaimBatchCapped(uint256,uint256[],uint256[],address,address,uint256,uint256)
+          handler: handleEventClaimBatchCapped
+        - event: EventClaimCapped(uint256,uint256,uint256,address,address,uint256,uint256)
+          handler: handleEventClaimCapped
+        - event: EventForge(uint256,uint256,uint256,address,address)
+          handler: handleEventForge
+  - kind: ethereum/contract
+    name: StarNFTFactory
+    network: bsc
+    source:
+      address: "0x0fd17bb46b471019f55bd14343373af785db7c2d"
+      abi: StarNFTFactory
+      startBlock: 14328215
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/starnftfactory.ts
+      entities:
+        - NFTCreated
+      abis:
+        - name: StarNFTFactory
+          file: ./abis/StarNFTFactory.json
+      eventHandlers:
+        - event: NFTCreated(indexed address,indexed address,address,address,uint256,string,string,bool)
+          handler: handleStarNFTCreated
+  - kind: ethereum/contract
+    name: StarNFTFactory-1
+    network: bsc
+    source:
+      address: "0x7c6aea7cd50592a5b5475e6a2d73b3b41f9c4c22"
+      abi: StarNFTFactory
+      startBlock: 15646037
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/starnftfactory.ts
+      entities:
+        - NFTCreated
+      abis:
+        - name: StarNFTFactory
+          file: ./abis/StarNFTFactory.json
+      eventHandlers:
+        - event: NFTCreated(indexed address,indexed address,address,address,uint256,string,string,bool)
+          handler: handleStarNFTCreated
+  - kind: ethereum/contract
+    name: StarNFTFactory-2
+    network: bsc
+    source:
+      address: "0x194b488b7f4130ce66e2d99f2e1dc91e1665eb69"
+      abi: StarNFTFactory
+      startBlock: 16076158
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/starnftfactory.ts
+      entities:
+        - NFTCreated
+      abis:
+        - name: StarNFTFactory
+          file: ./abis/StarNFTFactory.json
+      eventHandlers:
+        - event: NFTCreated(indexed address,indexed address,address,address,uint256,string,string,bool)
+          handler: handleStarNFTCreated
+  - kind: ethereum/contract
+    name: StarNFTFactory-3
+    network: bsc
+    source:
+      address: "0x9105fe3aed286e9820c1c2872d6194304d5ddfcf"
+      abi: StarNFTFactory
+      startBlock: 19280440
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/starnftfactory.ts
+      entities:
+        - NFTCreated
+      abis:
+        - name: StarNFTFactory
+          file: ./abis/StarNFTFactory.json
+      eventHandlers:
+        - event: NFTCreated(indexed address,indexed address,address,address,uint256,string,string,bool)
+          handler: handleStarNFTCreated
+
+templates:
+  - kind: ethereum/contract
+    name: StarNFT
+    network: bsc
+    source:
+      abi: StarNFT
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/starnft.ts
+      entities:
+        - StarNFT
+        - EventTranasfer
+      abis:
+        - name: StarNFT
+          file: ./abis/StarNFT.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
