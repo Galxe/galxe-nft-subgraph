@@ -8,7 +8,7 @@ import {
 } from "../generated/SpaceStationV2/SpaceStationV2"
 import {
   StarNFT as StarNFTTemplate
-} from "../generated/templates/StarNFT/StarNFT"
+} from "../generated/templates"
 import { 
   StarNFT,
   NFT,
@@ -36,7 +36,7 @@ function handleClaim(
   let starNFT = StarNFT.load(nft_contract.toHexString());
   if (starNFT === null) {
     // create template
-    StarNFTTemplate.bind(nft_contract);
+    StarNFTTemplate.create(nft_contract);
     starNFT = new StarNFT(nft_contract.toHexString());
     starNFT.save();
   }
@@ -48,9 +48,8 @@ function handleClaim(
   for (let i = 0; i < claim_nft.nftIDs.length; i++) {
     let nft_id = claim_nft.nftIDs[i];
     let verify_id = claim_nft.verifyIDs[i];
-    let nft_model_id = nft_contract.toHexString().concat("-").concat(nft_id.toString());
     // nft
-    let nft = new NFT(nft_model_id);
+    let nft = new NFT(verify_id.toString());
     nft.number = nft_id;
     nft.starNFT = starNFT.id;
     nft.owner = user;
@@ -58,7 +57,7 @@ function handleClaim(
     nft.save();
 
     // claim record
-    let claim = new ClaimRecord(nft_model_id);
+    let claim = new ClaimRecord(verify_id.toString());
     claim.nft = nft.id;
     claim.spacestation = spaceStation.id;
     claim.verifyID = verify_id;
@@ -87,7 +86,7 @@ export function handleEventClaimBatch(event: EventClaimBatch): void {
   nm.nftIDs = event.params._nftIDArr;
   nm.nftContract = event.params._starNFT;
 
-  log.debug("--> V2 ClaimBatch {}", [event.address.toHexString()]);
+  log.info("--> V2 ClaimBatch {}", [event.address.toHexString()]);
 
   handleClaim(em, nm);
 }
@@ -105,15 +104,15 @@ export function handleEventClaim(event: EventClaim): void {
   nm.campaignID = event.params._cid;
   nm.user = event.params._sender;
   
-  nm.verifyIDs = new Array<BigInt>();
-  nm.verifyIDs.push(event.params._dummyId);
+  nm.verifyIDs = [event.params._dummyId];
+  // nm.verifyIDs.push(event.params._dummyId);
   
-  nm.nftIDs = new Array<BigInt>();
-  nm.nftIDs.push(event.params._nftID);
+  nm.nftIDs = [event.params._nftID];
+  // nm.nftIDs.push(event.params._nftID);
 
   nm.nftContract = event.params._starNFT;
 
-  log.debug("--> V2 Claim {}", [event.address.toHexString()]);
+  log.info("--> V2 Claim {}", [event.address.toHexString()]);
 
   handleClaim(em, nm);
 }
@@ -135,7 +134,7 @@ export function handleEventClaimBatchCapped(
   nm.nftIDs = event.params._nftIDArr;
   nm.nftContract = event.params._starNFT;
 
-  log.debug("--> V2 ClaimBatchCapped {}", [event.address.toHexString()]);
+  log.info("--> V2 ClaimBatchCapped {}", [event.address.toHexString()]);
 
   handleClaim(em, nm);
 }
@@ -152,15 +151,15 @@ export function handleEventClaimCapped(event: EventClaimCapped): void {
   nm.campaignID = event.params._cid;
   nm.user = event.params._sender;
   
-  nm.verifyIDs = new Array<BigInt>();
-  nm.verifyIDs.push(event.params._dummyId);
+  nm.verifyIDs = [event.params._dummyId];
+  // nm.verifyIDs.push(event.params._dummyId);
   
-  nm.nftIDs = new Array<BigInt>();
-  nm.nftIDs.push(event.params._nftID);
+  nm.nftIDs = [event.params._nftID];
+  // nm.nftIDs.push(event.params._nftID);
 
   nm.nftContract = event.params._starNFT;
   
-  log.debug("--> V2 ClaimCapped {}", [event.address.toHexString()]);
+  log.info("--> V2 ClaimCapped {}", [event.address.toHexString()]);
 
   handleClaim(em, nm);
 }

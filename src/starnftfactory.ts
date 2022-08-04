@@ -3,7 +3,7 @@ import { NFTCreated } from "../generated/StarNFTFactory/StarNFTFactory"
 
 import {
   StarNFT as StarNFTTemplate,
-} from "../generated/templates/StarNFT/StarNFT"
+} from "../generated/templates"
 
 import {
   StarNFT,
@@ -28,5 +28,5 @@ export function handleStarNFTCreated(event: NFTCreated): void {
   factory.starNFTs.push(nft_contract.toHexString());
   factory.save();
 
-  StarNFTTemplate.bind(nft_contract);
+  StarNFTTemplate.create(nft_contract);
 }

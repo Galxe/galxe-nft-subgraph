@@ -19,15 +19,14 @@ export function handleTransfer(event: Transfer): void {
   let to = event.params.to;
   let nft_id = event.params.tokenId;
 
-  log.debug("NFT {} {} transfer from {} to {}", [
+  log.info("NFT {} {} transfer from {} to {}", [
     nft_contract.toHexString(), 
     nft_id.toString(), 
     from.toHexString(),
     to.toHexString()]);
 
-  if (from.toHexString() == ADDRESS_ZERO.toHexString()) {
-    // Wheather is Claim or ClaimBatch, this tx only contains one nft contract
-    // mint event
+  if (from.toHexString() == ADDRESS_ZERO) {
+    // Wheather is Claim or ClaimBatch, this tx only contains one nft contract mint event
     let tx = NFTMintTransaction.load(event.transaction.hash.toHexString());
     if (tx == null) {
       tx = new NFTMintTransaction(event.transaction.hash.toHexString());

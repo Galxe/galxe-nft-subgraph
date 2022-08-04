@@ -1,13 +1,18 @@
 {
-  "name": "project-galaxy-nft-bsc",
-  "license": "UNLICENSED",
+  "name": "project-galaxy-nft-subgraph",
+  "license": "Apache License, Version 2.0",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ projectgalaxyhq/project-galaxy-nft-bsc",
-    "create-local": "graph create --node http://localhost:8020/ projectgalaxyhq/project-galaxy-nft-bsc",
-    "remove-local": "graph remove --node http://localhost:8020/ projectgalaxyhq/project-galaxy-nft-bsc",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 projectgalaxyhq/project-galaxy-nft-bsc"
+    "deploy:bsc": "graph deploy --node https://api.thegraph.com/deploy/ projectgalaxyhq/project-galaxy-nft-bsc",
+    "deploy:polygon": "graph deploy --node https://api.thegraph.com/deploy/ projectgalaxyhq/project-galaxy-nft-polygon",
+    "deploy:mainnet": "graph deploy --node https://api.thegraph.com/deploy/ projectgalaxyhq/project-galaxy-nft-mainnet",
+    "prepare:bsc": "mustache config/bsc.json template.yaml > subgraph.yaml",
+    "prepare:polygon": "mustache config/polygon.json template.yaml > subgraph.yaml",
+    "prepare:mainnet": "mustache config/mainnet.json template.yaml > subgraph.yaml",
+    "create-local": "graph create --node http://localhost:8020/ projectgalaxyhq/project-galaxy-nft",
+    "remove-local": "graph remove --node http://localhost:8020/ projectgalaxyhq/project-galaxy-nft",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 projectgalaxyhq/project-galaxy-nft"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.21.1",

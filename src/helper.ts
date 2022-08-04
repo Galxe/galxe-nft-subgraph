@@ -23,7 +23,7 @@ export class NFTModel {
   cap: BigInt; // TODO: handle this
 }
 
-export const ADDRESS_ZERO = Bytes.fromHexString("0x0000000000000000000000000000000000000000");
+export let ADDRESS_ZERO = "0x0000000000000000000000000000000000000000";
 export let ZERO_BI = BigInt.fromI32(0);
 export let ONE_BI = BigInt.fromI32(1);
 export let TWO_BI = BigInt.fromI32(2);
