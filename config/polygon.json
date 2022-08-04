@@ -49,5 +49,32 @@
             "address": "0x878f490feb8e9cdb5424dc03aa42940460eba4d3",
             "block": 30360169
         }
+    ],
+    "StarNFT": [
+        {
+            "name": "StarNFT_1",
+            "address": "0xBf232A580C3306F7A7cA90D09ec241F6818D06FA",
+            "block": 22302216
+        },
+        {
+            "name": "StarNFT_2",
+            "address": "0x7557A528b2e1e9Cf7F3972504FB57FBa2BAE67D2",
+            "block": 22731304
+        },
+        {
+            "name": "StarNFT_3",
+            "address": "0x35ecE61a4331994B1efaEc94718B819373e53494",
+            "block": 22823422
+        },
+        {
+            "name": "StarNFT_4",
+            "address": "0x73Bc0bA23cA13Cb9A7FBeda5F661562EF985155E",
+            "block": 22885284
+        },
+        {
+            "name": "StarNFT_5",
+            "address": "0x381dda640C6A9000F645351424D9579e6c82B2be",
+            "block": 23166687
+        }
     ]
 }
