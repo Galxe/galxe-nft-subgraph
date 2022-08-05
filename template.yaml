@@ -5,7 +5,7 @@ dataSources:
 {{#SpaceStationV1}}
   - kind: ethereum/contract
     name: {{name}}
-    network: bsc
+    network: {{network}}
     source:
       address: "{{address}}"
       abi: SpaceStationV1
@@ -33,7 +33,7 @@ dataSources:
 {{#SpaceStationV2}}
   - kind: ethereum/contract
     name: {{name}}
-    network: bsc
+    network: {{network}}
     source:
       address: "{{address}}"
       abi: SpaceStationV2
@@ -67,7 +67,7 @@ dataSources:
 {{#StarNFTFactory}}
   - kind: ethereum/contract
     name: {{name}}
-    network: bsc
+    network: {{network}}
     source:
       address: "{{address}}"
       abi: StarNFTFactory
@@ -89,7 +89,7 @@ dataSources:
 {{#StarNFT}}
   - kind: ethereum/contract
     name: {{name}}
-    network: bsc
+    network: {{network}}
     source:
       address: "{{address}}"
       abi: StarNFT
@@ -111,7 +111,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: StarNFT
-    network: bsc
+    network: {{network}}
     source:
       abi: StarNFT
     mapping:
