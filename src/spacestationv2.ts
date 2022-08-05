@@ -48,8 +48,9 @@ function handleClaim(
   for (let i = 0; i < claim_nft.nftIDs.length; i++) {
     let nft_id = claim_nft.nftIDs[i];
     let verify_id = claim_nft.verifyIDs[i];
+    let nft_model_id = nft_contract.toHexString().concat("-").concat(nft_id.toString());
     // nft
-    let nft = new NFT(verify_id.toString());
+    let nft = new NFT(nft_model_id);
     nft.number = nft_id;
     nft.starNFT = starNFT.id;
     nft.owner = user;

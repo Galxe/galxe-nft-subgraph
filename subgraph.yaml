@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: SpaceStationV1
-    network: matic
+    network: mainnet
     source:
-      address: "0xdeb1F826c512EEE2FA9398225A3401A0Dd5311E2"
+      address: "0xc92EDE6aC9865111356B8f51fBD7ee8D261D9637"
       abi: SpaceStationV1
-      startBlock: 17607438
+      startBlock: 13087380
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -30,11 +30,11 @@ dataSources:
           handler: handleEventForge
   - kind: ethereum/contract
     name: SpaceStationV1_1
-    network: matic
+    network: mainnet
     source:
-      address: "0x6e7801d5b07dA1A82F6D1930685731a50645B182"
+      address: "0x5bD25d2f4f26Bc82A34dE016D34612A28A0Cd492"
       abi: SpaceStationV1
-      startBlock: 22544793
+      startBlock: 13101487
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -56,11 +56,11 @@ dataSources:
           handler: handleEventForge
   - kind: ethereum/contract
     name: SpaceStationV1_2
-    network: matic
+    network: mainnet
     source:
-      address: "0x44D2a93948B70DC0568020AaD2efc6FE7d146404"
+      address: "0x987fb80B5E8646A2DC4C276881484BD442d645F3"
       abi: SpaceStationV1
-      startBlock: 22777900
+      startBlock: 13815389
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -82,11 +82,11 @@ dataSources:
           handler: handleEventForge
   - kind: ethereum/contract
     name: SpaceStationV1_3
-    network: matic
+    network: mainnet
     source:
-      address: "0x6cad6e1abc83068ea98924aef37e996ed02abf1c"
+      address: "0xaae9f9d4fb8748feba405cE25856DC57C91BbB92"
       abi: SpaceStationV1
-      startBlock: 23101101
+      startBlock: 14697188
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -108,11 +108,11 @@ dataSources:
           handler: handleEventForge
   - kind: ethereum/contract
     name: SpaceStationV2
-    network: matic
+    network: mainnet
     source:
-      address: "0xf6D1B85af155229AcD7B523601148585A1ff67C6"
+      address: "0x75cdA57917E9F73705dc8BCF8A6B2f99AdBdc5a5"
       abi: SpaceStationV2
-      startBlock: 27825430
+      startBlock: 14697188
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -140,11 +140,11 @@ dataSources:
           handler: handleEventForge
   - kind: ethereum/contract
     name: StarNFTFactory
-    network: matic
+    network: mainnet
     source:
-      address: "0xdd723eb009bd36f3a2911dc1dc17a7d317a609b7"
+      address: "0x8ed76e942f4ab16f6fb971d2070acc18ba1625d4"
       abi: StarNFTFactory
-      startBlock: 23548120
+      startBlock: 14074341
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -160,11 +160,11 @@ dataSources:
           handler: handleStarNFTCreated
   - kind: ethereum/contract
     name: StarNFTFactory_1
-    network: matic
+    network: mainnet
     source:
-      address: "0xa088f0321179df39893376448d038312b32ac571"
+      address: "0x5cb046747ff4ac1fce3c491d9896665b72eacd1b"
       abi: StarNFTFactory
-      startBlock: 25406466
+      startBlock: 14392443
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -180,11 +180,11 @@ dataSources:
           handler: handleStarNFTCreated
   - kind: ethereum/contract
     name: StarNFTFactory_2
-    network: matic
+    network: mainnet
     source:
-      address: "0x786f618aadae844d491b716b53d9d4100178bd9e"
+      address: "0x99bDe8367D7b99d2B1Ae6fcE12068b49aba47207"
       abi: StarNFTFactory
-      startBlock: 25961140
+      startBlock: 15119801
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -199,32 +199,12 @@ dataSources:
         - event: NFTCreated(indexed address,indexed address,address,address,uint256,string,string,bool)
           handler: handleStarNFTCreated
   - kind: ethereum/contract
-    name: StarNFTFactory_3
-    network: matic
+    name: CoinlistNFT
+    network: mainnet
     source:
-      address: "0x878f490feb8e9cdb5424dc03aa42940460eba4d3"
-      abi: StarNFTFactory
-      startBlock: 30360169
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.4
-      language: wasm/assemblyscript
-      file: ./src/starnftfactory.ts
-      entities:
-        - NFTCreated
-      abis:
-        - name: StarNFTFactory
-          file: ./abis/StarNFTFactory.json
-      eventHandlers:
-        - event: NFTCreated(indexed address,indexed address,address,address,uint256,string,string,bool)
-          handler: handleStarNFTCreated
-  - kind: ethereum/contract
-    name: StarNFT_1
-    network: matic
-    source:
-      address: "0xBf232A580C3306F7A7cA90D09ec241F6818D06FA"
+      address: "0x12F837F1a2C96909C0b85FafB3aF7eEbF9ecff0D"
       abi: StarNFT
-      startBlock: 22302216
+      startBlock: 13904678
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -239,12 +219,12 @@ dataSources:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
   - kind: ethereum/contract
-    name: StarNFT_2
-    network: matic
+    name: CoinlistFriendNFT
+    network: mainnet
     source:
-      address: "0x7557A528b2e1e9Cf7F3972504FB57FBa2BAE67D2"
+      address: "0x36f1Bfa4eEC9A89Ea897E9e8b44462471106C10D"
       abi: StarNFT
-      startBlock: 22731304
+      startBlock: 13943840
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -259,12 +239,12 @@ dataSources:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
   - kind: ethereum/contract
-    name: StarNFT_3
-    network: matic
+    name: TradingNFT
+    network: mainnet
     source:
-      address: "0x35ecE61a4331994B1efaEc94718B819373e53494"
+      address: "0xD63869E974c3Ce7E57095E18194D894B2fDF3F97"
       abi: StarNFT
-      startBlock: 22823422
+      startBlock: 15171813
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -279,12 +259,12 @@ dataSources:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
   - kind: ethereum/contract
-    name: StarNFT_4
-    network: matic
+    name: ChiefToadNFT
+    network: mainnet
     source:
-      address: "0x73Bc0bA23cA13Cb9A7FBeda5F661562EF985155E"
+      address: "0xD42c465d28E96248C73f24442A7AFbBa7e169AAe"
       abi: StarNFT
-      startBlock: 22885284
+      startBlock: 15228622
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -299,12 +279,32 @@ dataSources:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
   - kind: ethereum/contract
-    name: StarNFT_5
-    network: matic
+    name: BitIslandsNFT
+    network: mainnet
     source:
-      address: "0x381dda640C6A9000F645351424D9579e6c82B2be"
+      address: "0xB75ecF7CD68ee8b0cF481D7e3C03a0b1C52AEe3A"
       abi: StarNFT
-      startBlock: 23166687
+      startBlock: 15099936
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/starnft.ts
+      entities:
+        - EventTranasfer
+      abis:
+        - name: StarNFT
+          file: ./abis/StarNFT.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+  - kind: ethereum/contract
+    name: CiaraDAO
+    network: mainnet
+    source:
+      address: "0x629c1738EFDf24958f7911339010B2a1eC0487dD"
+      abi: StarNFT
+      startBlock: 14098694
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -321,7 +321,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: StarNFT
-    network: matic
+    network: mainnet
     source:
       abi: StarNFT
     mapping:
