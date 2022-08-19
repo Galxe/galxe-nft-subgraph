@@ -25,7 +25,7 @@ type NFT @entity {
 
 type Campaign @entity {
   id: ID!
-  cap: BigInt!
+  # cap: BigInt!
   nfts: [NFT!]! @derivedFrom(field: "campaign")
 }
 
@@ -36,7 +36,7 @@ type ClaimRecord @entity {
   verifyID: BigInt!
   cid: BigInt!
   user: Bytes!
-  cap: BigInt!
+  # cap: BigInt!
   tx: Bytes!
   block: BigInt!
   timestamp: BigInt!
@@ -50,7 +50,7 @@ type ForgeRecord @entity {
   cid: BigInt!
   user: Bytes!
   powah: BigInt!
-  cap: BigInt!
+  # cap: BigInt!
   burnedNFTs: [NFT!]!
   tx: Bytes!
   block: BigInt!

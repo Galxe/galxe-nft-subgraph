@@ -13,7 +13,7 @@ import {
 
 export function handleStarNFTCreated(event: NFTCreated): void {
 
-  log.debug("--> New StarNFT Created: {}", [event.params.starAddr.toHexString()]);
+  log.info("--> New StarNFT Created: {}", [event.params.starAddr.toHexString()]);
 
   let factory = StarNFTFactory.load(event.address.toHexString());
   if (factory == null) {

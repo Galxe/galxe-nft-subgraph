@@ -64,7 +64,7 @@ function handleClaim(
     claim.verifyID = verify_id;
     claim.cid = campaign_id;
     claim.user = user;
-    claim.cap = ZERO_BI;
+    // claim.cap = ZERO_BI;
     claim.tx = event.txHash;
     claim.block = event.block;
     claim.timestamp = event.timestamp;
@@ -104,13 +104,8 @@ export function handleEventClaim(event: EventClaim): void {
   let nm = new NFTModel();
   nm.campaignID = event.params._cid;
   nm.user = event.params._sender;
-  
   nm.verifyIDs = [event.params._dummyId];
-  // nm.verifyIDs.push(event.params._dummyId);
-  
   nm.nftIDs = [event.params._nftID];
-  // nm.nftIDs.push(event.params._nftID);
-
   nm.nftContract = event.params._starNFT;
 
   log.info("--> V2 Claim {}", [event.address.toHexString()]);
@@ -151,13 +146,8 @@ export function handleEventClaimCapped(event: EventClaimCapped): void {
   let nm = new NFTModel();
   nm.campaignID = event.params._cid;
   nm.user = event.params._sender;
-  
   nm.verifyIDs = [event.params._dummyId];
-  // nm.verifyIDs.push(event.params._dummyId);
-  
   nm.nftIDs = [event.params._nftID];
-  // nm.nftIDs.push(event.params._nftID);
-
   nm.nftContract = event.params._starNFT;
   
   log.info("--> V2 ClaimCapped {}", [event.address.toHexString()]);

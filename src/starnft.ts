@@ -43,7 +43,7 @@ export function handleTransfer(event: Transfer): void {
   let nft_model_id = nft_contract.toHexString().concat("-").concat(nft_id.toString());
   let nft = NFT.load(nft_model_id);
   if (nft == null) {
-    log.error("NFT Not Found {} {}", [nft_contract.toHexString(), nft_id.toString()]);
+    log.warning("NFT Not Found {} {}", [nft_contract.toHexString(), nft_id.toString()]);
     return;
   }
   nft.owner = to;

@@ -20,7 +20,7 @@ export class NFTModel {
   verifyIDs: Array<BigInt>;
   nftIDs: Array<BigInt>;
   nftContract: Address;
-  cap: BigInt; // TODO: handle this
+  // cap: BigInt; // TODO: handle this
 }
 
 export let ADDRESS_ZERO = "0x0000000000000000000000000000000000000000";
@@ -72,7 +72,7 @@ export function createCampaign(cid: string): Campaign {
   let campaign = Campaign.load(cid);
   if (campaign === null) {
     campaign = new Campaign(cid);
-    campaign.cap = ZERO_BI;
+    // campaign.cap = ZERO_BI;
     campaign.save();
   }
   return campaign as Campaign;
