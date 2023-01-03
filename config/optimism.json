@@ -1,0 +1,19 @@
+{
+    "network": "optimism",
+    "SpaceStationV1": [],
+    "SpaceStationV2": [
+        {
+            "name": "SpaceStationV2",
+            "address": "0xa36AABC82b62b01884a66Dd9f51aB2E7061748aA",
+            "block": 1288866
+        }
+    ],
+    "StarNFTFactory": [
+        {
+            "name": "StarNFTFactory",
+            "address": "0xF08975b59752eD6e78277FA7e9958140c7f46Dc3",
+            "block": 1375799
+        }
+    ],
+    "StarNFT": []
+}

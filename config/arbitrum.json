@@ -1,0 +1,30 @@
+{
+    "network": "arbitrum-one",
+    "SpaceStationV1": [
+        {
+            "name": "SpaceStationV1",
+            "address": "0x1ae981A0a3AE5F9cDc059d9478D2C37E8eB442eB",
+            "block": 9919488
+        }
+    ],
+    "SpaceStationV2": [
+        {
+            "name": "SpaceStationV2",
+            "address": "0x9e6eF7F75ad88D4Edb4C9925C94B769C5b0d6281",
+            "block": 11015643
+        }
+    ],
+    "StarNFTFactory": [
+        {
+            "name": "StarNFTFactory",
+            "address": "0xA3249d782cd070b29a34A6bB092257e48215a489",
+            "block": 9918742
+        },
+        {
+            "name": "StarNFTFactory_2",
+            "address": "0x171E4fA249375834a6198849AcA17c7889CAab47",
+            "block": 17040716
+        }
+    ],
+    "StarNFT": []
+}

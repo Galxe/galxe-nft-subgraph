@@ -1,0 +1,19 @@
+{
+    "network": "boba",
+    "SpaceStationV1": [],
+    "SpaceStationV2": [
+        {
+            "name": "SpaceStationV2",
+            "address": "0x0C13f714590857243FEaF9878E8FE48cC601190d",
+            "block": 892108
+        }
+    ],
+    "StarNFTFactory": [
+        {
+            "name": "StarNFTFactory",
+            "address": "0x554fB92B1551a48B4357a7C40CCd8F15d18e8953",
+            "block": 892102
+        }
+    ],
+    "StarNFT": []
+}

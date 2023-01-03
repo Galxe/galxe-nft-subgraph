@@ -1,0 +1,30 @@
+{
+    "network": "avalanche",
+    "SpaceStationV1": [
+        {
+            "name": "SpaceStationV1",
+            "address": "0xe338D00f5fBD32Fa414531be1685418c7C118E83",
+            "block": 8647536
+        }
+    ],
+    "SpaceStationV2": [
+        {
+            "name": "SpaceStationV2",
+            "address": "0x13D8c4e3741e968Cc8E740bdB02537cB1d2d70e6",
+            "block": 14169694
+        }
+    ],
+    "StarNFTFactory": [
+        {
+            "name": "StarNFTFactory",
+            "address": "0x047D986885fE4e61D8e96F8D66823DfA7f7D6e82",
+            "block": 12187991
+        },
+        {
+            "name": "StarNFTFactory_2",
+            "address": "0x47da5fb5a0a6a607887e1aA67f86c4F4BC6E325b",
+            "block": 16923757
+        }
+    ],
+    "StarNFT": []
+}

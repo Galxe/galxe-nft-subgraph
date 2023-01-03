@@ -1,0 +1,30 @@
+{
+    "network": "fantom",
+    "SpaceStationV1": [
+        {
+            "name": "SpaceStationV1",
+            "address": "0x88a8378d0f3d4ff110d2757e12fe3adb17903403",
+            "block": 28967654
+        }
+    ],
+    "SpaceStationV2": [
+        {
+            "name": "SpaceStationV2",
+            "address": "0x168a6136fD4F60699B64fb9F8a2F8ed95B279954",
+            "block": 37380174
+        }
+    ],
+    "StarNFTFactory": [
+        {
+            "name": "StarNFTFactory",
+            "address": "0x7cd2b1Bb442F5Bf7915d6ecD4c2Fe2E756FeE47b",
+            "block": 33509569
+        },
+        {
+            "name": "StarNFTFactory_2",
+            "address": "0x7c79bEa8A3c083Dae1a09e7c4437F654dDb28481",
+            "block": 42063956
+        }
+    ],
+    "StarNFT": []
+}
