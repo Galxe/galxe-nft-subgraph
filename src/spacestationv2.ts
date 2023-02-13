@@ -155,4 +155,22 @@ export function handleEventClaimCapped(event: EventClaimCapped): void {
   handleClaim(em, nm);
 }
 
-export function handleEventForge(event: EventForge): void {}
+export function handleEventForge(event: EventForge): void {
+  let em = new EventModel();
+  em.spaceStationAddr = event.address;
+  em.block = event.block.number;
+  em.txHash = event.transaction.hash;
+  em.logIndex = event.logIndex;
+  em.timestamp = event.block.timestamp;
+
+  let nm = new NFTModel();
+  nm.campaignID = event.params._cid;
+  nm.user = event.params._sender;
+  nm.verifyIDs = [event.params._dummyId];
+  nm.nftIDs = [event.params._nftID];
+  nm.nftContract = event.params._starNFT;
+  
+  log.info("--> V2 Forge {}", [event.address.toHexString()]);
+
+  handleClaim(em, nm);
+}
